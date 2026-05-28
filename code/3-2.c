@@ -13,7 +13,7 @@ int main(int argc, const char* argv[]) {
    if(fp == NULL){
         return 0;
     }
-    fscanf(fp, "%9s", buffer);
+    fgets(buffer, sizeof(buffer), fp);
     fclose(fp);
     return 0;
 }
