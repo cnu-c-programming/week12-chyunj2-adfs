@@ -7,7 +7,7 @@ int main(int argc, const char* argv[]) {
 
     FILE* fp = fopen(argv[1], "r");
     const char* target_str = argv[2];
-
+char c[1000];
 while(fgets(c, sizeof(c), fp) != NULL) {
         if(strstr(c, target_str) != NULL) {
             printf("%s", c);
