@@ -3,9 +3,9 @@
 int main(int argc, const char* argv[]) {
     if (argc < 3)
         return 0;
-char c;
-    while ((c = fgetc(fp_src)) != EOF) {
-        putchar(c);
+char c[1024];
+    while (fgets(c, sizeof(c), fp_src) != NULL) {
+        fputs(c, fp_dst);
     }
 
 }
