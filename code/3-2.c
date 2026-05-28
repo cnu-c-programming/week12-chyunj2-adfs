@@ -10,7 +10,11 @@ int main(int argc, const char* argv[]) {
 
     FILE* fp = fopen(filename, "r");
 
-
+   if(fp == NULL){
+        return 0;
+    }
+    fscanf(fp, "%s", buffer);
+    fclose(fp);
     return 0;
 }
 
